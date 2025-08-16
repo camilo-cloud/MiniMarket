@@ -1,0 +1,9 @@
+:root {
+  --font-main: 'Inter', sans-serif;
+  --color-primary: #16A34A;
+  --color-secondary: #FACC15;
+  --color-accent: #DC2626;
+  --color-bg: #F9FAFB;
+  --color-text: #1F2937;
+  --color-text-muted: #6B7280;
+}
