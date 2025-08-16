@@ -1,0 +1,19 @@
+
+.header__container{
+    background-color: var(--color-accent);
+    padding: 3px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__logo{
+    display: flex;
+}
+.nav__list{
+    display: flex;
+    justify-content: center;
+}
+.icon{
+    width: 40px;
+    height: 40px;
+}
