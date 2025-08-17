@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --font-main: 'Inter', sans-serif;
   --color-primary: #16A34A;
   --color-secondary: #FACC15;
@@ -6,4 +6,33 @@
   --color-bg: #F9FAFB;
   --color-text: #1F2937;
   --color-text-muted: #6B7280;
+} */
+
+/* :root{
+  --color-accent: #1F2937; 
+--color-primary: #16A34A; 
+--color-secondary: #FACC15; 
+--color-bg: #F9FAFB; 
+--color-text: #F9FAFB; 
+
+} */
+
+:root {
+  --font-main: 'Inter', sans-serif;
+
+  /* Brand Colors */
+  --color-primary: #16A34A;   /* verde fresco: vegetales y productos naturales */
+  --color-secondary: #FBBF24; /* amarillo cálido: frutas y sensación alegre */
+  --color-accent: #DC2626;    /* rojo tomate: frescura y atención */
+
+  /* Background & Text */
+  --color-bg: #FEFDF5;        /* fondo claro cálido, más moderno que blanco puro */
+  --color-bg-alt: #FFF7E5;    /* secciones alternativas */
+  --color-text: #1F2937;      /* gris oscuro para legibilidad */
+  --color-text-muted: #6B7280;/* gris para textos secundarios */
+  
+  /* Borders & subtle accents */
+  --color-border: #E5E7EB;    /* bordes suaves, separadores */
+  --color-hover-buttons:#b91c1c;
+  --color-hover-buttons-secondary:#e5a100; 
 }

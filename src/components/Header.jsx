@@ -1,22 +1,160 @@
-import logo from "../assets/images/shopping_cart.png"
-import "./Header.css"
-
+import { useState, useRef, useEffect } from "react";
+import logo from "../assets/images/shopping_cart.png";
+import Button from "./Button";
+import { NavLink } from "react-router-dom";
+import "./Header.css";
 
 export default function Header() {
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const mobileMenuRef = useRef(null);
+
+    const toggleMobileMenu = () => {
+        setMobileMenuOpen(!mobileMenuOpen);
+    };
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target)) {
+                setMobileMenuOpen(false);
+            }
+        };
+
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, []);
+
+
     return (
         <header className="header__container">
-            <div className="header__logo">
-                <img className="icon" src={logo} alt="logo" />
-                <h1>MiniMarket</h1>
+            <NavLink to="/">
+                <div className="header__logo">
+                    <img className="header__logo-icon" src={logo} alt="logo" />
+                    <h1 className="header__logo-text">MiniMarket</h1>
+                </div>
+            </NavLink>
+
+            <div className="header__search-bar">
+                <input
+                    className="header__search-input"
+                    type="text"
+                    placeholder="Search products..."
+                />
+                <Button variant="secondary">Search</Button>
             </div>
+
             <nav className="header__nav">
-                <ul className="nav__list">
-                    <li>Home</li>
-                    <li>Products</li>
-                    <li>About</li>
-                    <li>Contact</li>
+                <ul className="header__nav-list">
+                    <li>
+                        <NavLink
+                            to="/"
+                            className={({ isActive }) =>
+                                `nav__item${isActive ? " nav__item--active" : ""}`
+                            }
+                        >
+                            Home
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            to="/products"
+                            className={({ isActive }) =>
+                                `nav__item${isActive ? " nav__item--active" : ""}`
+                            }
+                        >
+                            Products
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            to="/about"
+                            className={({ isActive }) =>
+                                `nav__item${isActive ? " nav__item--active" : ""}`
+                            }
+                        >
+                            About
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            to="/contact"
+                            className={({ isActive }) =>
+                                `nav__item${isActive ? " nav__item--active" : ""}`
+                            }
+                        >
+                            Contact
+                        </NavLink>
+                    </li>
                 </ul>
             </nav>
+
+            <div className="header__icon-container">
+                <Button variant="icon">🛒</Button>
+            </div>
+
+            <Button className="header__hamburger" onClick={toggleMobileMenu}>
+                ☰
+            </Button>
+
+            {mobileMenuOpen && (
+                <div className="header__mobile-menu" ref={mobileMenuRef}>
+                    <div className="mobile-search">
+                        <input
+                            className="header__search-input"
+                            type="text"
+                            placeholder="Search products..."
+                        />
+                        <Button variant="secondary">Search</Button>
+                    </div>
+                    <ul className="mobile-nav-list">
+                        <li>
+                            <NavLink
+                                to="/"
+                                className={({ isActive }) =>
+                                    `nav__item${isActive ? " nav__item--active" : ""}`
+                                }
+                                onClick={() => setMobileMenuOpen(false)}
+                            >
+                                Home
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink
+                                to="/products"
+                                className={({ isActive }) =>
+                                    `nav__item${isActive ? " nav__item--active" : ""}`
+                                }
+                                onClick={() => setMobileMenuOpen(false)}
+                            >
+                                Products
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink
+                                to="/about"
+                                className={({ isActive }) =>
+                                    `nav__item${isActive ? " nav__item--active" : ""}`
+                                }
+                                onClick={() => setMobileMenuOpen(false)}
+                            >
+                                About
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink
+                                to="/contact"
+                                className={({ isActive }) =>
+                                    `nav__item${isActive ? " nav__item--active" : ""}`
+                                }
+                                onClick={() => setMobileMenuOpen(false)}
+                            >
+                                Contact
+                            </NavLink>
+                        </li>
+                    </ul>
+                </div>
+            )}
         </header>
-    )
+    );
 }

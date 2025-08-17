@@ -1,0 +1,42 @@
+.btn {
+  font-family: var(--font-main);
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Primary button (future CTA) */
+.btn--primary {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+}
+.btn--primary:hover {
+  background-color: #128337; /* darker green */
+}
+
+/* Secondary button (search, highlight) */
+.btn--secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+}
+.btn--secondary:hover {
+  background-color: var(--color-hover-buttons-secondary); /* darker yellow */
+}
+
+/* Icon button (cart or small icons) */
+.btn--icon {
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn--icon:hover {
+  background-color: var(--color-hover-buttons-secondary);
+  color: var(--color-bg);
+}

@@ -10,6 +10,8 @@ body {
   font-family: var(--font-main);
   background-color: var(--color-bg);
   color: var(--color-text);
+  padding-top: 80px; /* Prevent content from being hidden behind the fixed header */
+
 }
 
 a {
