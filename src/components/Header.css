@@ -3,11 +3,11 @@
     background-color: var(--color-primary);
     padding: 15px 30px;
     display: flex;
-    justify-content: space-between; /* logo - search - carrito */
+    justify-content: space-between; 
     align-items: center;
     color: var(--color-bg);
     font-family: var(--font-main);
-    flex-wrap: nowrap; /* evita que los elementos salten de línea */
+    flex-wrap: nowrap;
     position: fixed; 
     top: 0;
     left: 0;
@@ -19,7 +19,7 @@
     display: flex;
     align-items: center; 
     gap: 10px;
-    flex-shrink: 0; /* no se encoge */
+    flex-shrink: 0;
 }
 
 .header__logo-icon {
@@ -36,9 +36,9 @@
     display: flex;
     align-items: center; 
     gap: 6px;
-    width: 450px; /* ancho fijo */
-    margin: 0 20px 0 60px ; /* separación izquierda y derecha */
-    flex-shrink: 0; /* no se encoge */
+    width: 450px; 
+    margin: 0 20px 0 60px ; 
+    flex-shrink: 0; 
 }
 
 .header__search-input {
@@ -46,7 +46,7 @@
     border-radius: 6px;
     border: 1px solid #ccc; 
     outline: none;
-    width: 100%; /* ocupa todo el ancho del contenedor */
+    width: 100%; 
     max-width: 100%;
 }
 
@@ -61,7 +61,7 @@
     list-style: none;
     margin-left: 30px;
     padding: 0 20px;
-    flex-shrink: 1; /* se encoge si hace falta */
+    flex-shrink: 1;
     min-width: 0;
 }
 
@@ -81,7 +81,7 @@
 
 .header__icon-container {
     margin-right: 10px;
-    flex-shrink: 0; /* no se encoge */
+    flex-shrink: 0; 
 }
 
 /* Hide hamburger on desktop */

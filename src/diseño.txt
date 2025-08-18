@@ -1,0 +1,31 @@
+HEADER (ya lo tienes hecho)
+
+HERO / BANNER PRINCIPAL
+    [ Imagen o slider con promociones ]
+    [ Texto corto: "Ofertas frescas cada día" ]
+    [ Botón CTA: "Ver ofertas" ]
+
+CATEGORÍAS RÁPIDAS
+    [ Card: Frutas y Verduras ]
+    [ Card: Lácteos y Huevos ]
+    [ Card: Bebidas ]
+    [ Card: Snacks ]
+    [ Card: Aseo y limpieza ]
+
+OFERTAS DESTACADAS / PRODUCTOS DE LA SEMANA
+    [ Grid de ProductCard ]
+        - Producto 1
+        - Producto 2
+        - Producto 3
+        - Producto 4
+
+BENEFICIOS / INFO DEL MINIMARKET
+    [ Icono + Texto: Productos frescos todos los días ]
+    [ Icono + Texto: Entrega rápida en tu zona ]
+    [ Icono + Texto: Precios justos de barrio ]
+
+CTA FINAL
+    [ Texto motivador: "Haz tu pedido online y recíbelo en minutos" ]
+    [ Botón CTA: "Comprar ahora" ]
+
+FOOTER (información de contacto, links, redes)
