@@ -64,9 +64,9 @@
 /* Responsive */
 @media (max-width: 768px) {
   .hero-slide {
-    height: 50vh;
+    height: 40vh;
   }
-
+  
   .hero-text h2 {
     font-size: 1.5rem;
   }
