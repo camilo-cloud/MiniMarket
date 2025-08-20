@@ -1,0 +1,24 @@
+.bestOffers__container{
+    margin:70px 10px 20px 10px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+.bestOffers__title{
+    font-size:3rem;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+.cards__container{
+    padding:20px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    /* transform: scale(0.7); */
+}
+.smallBanner{
+    width: 200px;
+    height: 300px;
+}
