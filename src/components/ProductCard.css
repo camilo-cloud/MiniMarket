@@ -16,9 +16,9 @@
   
   .card__container:hover {
     transform: scale(1.03);
-    /* box-shadow: offset-x offset-y blur-radius spread-radius color; */
     box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
   }
+ /* box-shadow: offset-x offset-y blur-radius spread-radius color; */
   
   .product__img-container {
     width: 100%;
