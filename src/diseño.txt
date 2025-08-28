@@ -80,3 +80,10 @@ Si lo que quieres es mostrar músculo técnico, puedes simular:
 Login/Register (aunque sea fake, con validaciones en frontend).
 Checkout con formulario validado.
 Dark/Light mode con toggle (bonus).
+
+
+COSAS QUE ESTÁN PENDIENTE
+1. Buscador del Header Funcionalidades
+2. Botón de agregar al carrito funcional en todas las cards
+3. Página de compras
+4. Cambiar las imágenes del banner
