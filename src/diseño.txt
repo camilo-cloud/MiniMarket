@@ -87,3 +87,4 @@ COSAS QUE ESTÁN PENDIENTE
 2. Botón de agregar al carrito funcional en todas las cards
 3. Página de compras
 4. Cambiar las imágenes del banner
+5. ReadMe

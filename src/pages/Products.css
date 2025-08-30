@@ -76,8 +76,18 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+
+    .products__section-container{
+        display: flex;
+        flex-direction:column;
+        align-items:center;
+    }
     .filterProducts__container {
         flex-direction: column;
+        justify-content: center;
+        align-items:center;
+        width:90%;
+        margin-right: 10px;
     }
     
     .filters__container {
