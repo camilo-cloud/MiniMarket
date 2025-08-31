@@ -88,3 +88,4 @@ COSAS QUE ESTÁN PENDIENTE
 3. Página de compras
 4. Cambiar las imágenes del banner
 5. ReadMe
+6. preguntar por todas las funcionalidades posibles de la cartpage y agregarlas

@@ -1,7 +1,7 @@
 // ProductCard.jsx
 import "./ProductCard.css";
 
-export default function ProductCard({ id, name, category, price, image, isOffer }) {
+export default function ProductCard({ id, name, category, price, image, isOffer, addToCart }) {
   // Ensure price is always treated as a number
   const numericPrice = Number(price);
 
@@ -37,6 +37,10 @@ export default function ProductCard({ id, name, category, price, image, isOffer 
       <button
         className="addToCart"
         aria-label={`Add ${name} to Cart`}
+        onClick={() => addToCart({ 
+          id, name, price: numericPrice, image, isOffer 
+        })}
+        
       >
         Add to Cart
       </button>

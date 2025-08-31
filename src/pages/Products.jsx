@@ -5,7 +5,7 @@ import productData from "../data/productData.js";
 import Filters from "../components/Filters";
 import "./Products.css";
 
-export default function Products() {
+export default function Products({addToCart}){
     // Calculate actual min and max prices
     const allPrices = productData.map(product => product.price);
     const minPrice = Math.min(...allPrices);
@@ -77,6 +77,7 @@ export default function Products() {
                             price={product.price} 
                             image={product.image} 
                             isOffer={product.isOffer}
+                            addToCart={addToCart}
                         />
                     )}
                 </div>

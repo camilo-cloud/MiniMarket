@@ -5,16 +5,39 @@ import Products from "./pages/Products";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
+import CartPage from "./pages/CartPage";
+import { useState } from "react";
 
 function App() {
+
+  const [cart, setCart] = useState([]);
+
+  function addToCart(product) {
+    const index = cart.findIndex(item => item.id === product.id);
+    if (index !== -1) {
+      const newCart = [...cart];
+      newCart[index] = {
+        ...newCart[index],
+        quantity: newCart[index].quantity + 1
+      };
+      console.log(newCart)
+      setCart(newCart);
+    } else {
+      setCart([...cart, { ...product, quantity: 1 }]);
+    }
+  }
+
+
+
   return (
     <Router>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/products" element={<Products />} />
+        <Route path="/products" element={<Products addToCart={addToCart}/>} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/cart" element={<CartPage />} />
       </Routes>
       <Footer />
     </Router>
