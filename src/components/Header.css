@@ -89,6 +89,22 @@
     display: none;
 }
 
+.cart-badge {
+    background-color: var(--color-accent);
+    color:var(--color-bg);
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.8rem;
+    position: absolute;
+    top: -8px;
+    right: -8px;
+  }
+  
+  .header__icon-container {
+    position: relative; 
+  }
+  
+
 /* ===== Responsive adjustments ===== */
 @media (max-width: 1200px) {
     .header__nav-list {
@@ -114,8 +130,7 @@
 /* ===== Mobile Styles ===== */
 @media (max-width: 840px) {
     .header__search-bar,
-    .header__nav-list,
-    .header__icon-container {
+    .header__nav-list {
         display: none;
     }
 

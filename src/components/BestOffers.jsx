@@ -4,7 +4,7 @@ import ProductCard from "./ProductCard.jsx";
 import productData from "../data/productData.js";
 import smallBanner from "../assets/images/buyBanner_optimized.webp";
 
-export default function BestOffers() {
+export default function BestOffers({addToCart}) {
   const offers = productData.filter(p => p.isOffer).slice(0, 3);
 
   return (
@@ -22,6 +22,7 @@ export default function BestOffers() {
               price={p.price}
               image={p.image}
               isOffer={p.isOffer}
+              addToCart={addToCart}
             />
           ))}
         </div>

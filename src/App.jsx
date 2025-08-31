@@ -31,9 +31,9 @@ function App() {
 
   return (
     <Router>
-      <Header />
+      <Header cart={cart}/>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home addToCart={addToCart}/>} />
         <Route path="/products" element={<Products addToCart={addToCart}/>} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />

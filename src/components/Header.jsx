@@ -3,10 +3,13 @@ import logo from "../assets/images/shopping_cart.png";
 import Button from "./Button";
 import { NavLink } from "react-router-dom";
 import "./Header.css";
+import { Link } from "react-router-dom";
 
-export default function Header() {
+export default function Header({cart}) {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const mobileMenuRef = useRef(null);
+
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
 
     const toggleMobileMenu = () => {
         setMobileMenuOpen(!mobileMenuOpen);
@@ -90,7 +93,10 @@ export default function Header() {
             </nav>
 
             <div className="header__icon-container">
-                <Button variant="icon">🛒</Button>
+                <Link to="/cart">
+                    <Button variant="icon">🛒 {totalItems > 0 && <span className="cart-badge">{totalItems}</span>}
+                    </Button>
+                </Link>
             </div>
 
             <Button className="header__hamburger" onClick={toggleMobileMenu}>

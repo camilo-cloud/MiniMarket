@@ -8,7 +8,7 @@ import banner3 from "../assets/images/bannerHorizontal3.webp";
 import "./Home.css"
 import { Link } from "react-router-dom";
 
-export default function Home() {
+export default function Home({addToCart}) {
     return (
         <main>
             <Hero />
@@ -23,7 +23,7 @@ export default function Home() {
                     <img src={banner1} alt="Fresh Fruits and Veggies" />
                 </div>
             </Link>
-            <BestOffers />
+            <BestOffers addToCart={addToCart} />
             <Link to="/products?category=dairy">
                 <div className="bannerHome">
                     <img src={banner2} alt="Everything for your delicious meals" />

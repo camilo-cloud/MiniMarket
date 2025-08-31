@@ -88,4 +88,6 @@ COSAS QUE ESTÁN PENDIENTE
 3. Página de compras
 4. Cambiar las imágenes del banner
 5. ReadMe
-6. preguntar por todas las funcionalidades posibles de la cartpage y agregarlas
+6. preguntar por todas las funcionalidades posibles de la cartpage y 
+7. quitarles a las tarjetas qeu aparezca la manito en toda la tarjeta 
+ para que quede solo que aparezca cuando se haga hover sobre el
