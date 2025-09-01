@@ -26,18 +26,54 @@ function App() {
       setCart([...cart, { ...product, quantity: 1 }]);
     }
   }
+ 
+  //eliminate an item from the cart
+  function removeFromCart(productId){
+    const newCart = cart.filter(item => item.id !== productId);
+    setCart(newCart);
+  }
 
+  //update the quantity of an item in the cart
+  function updateQuantity(productId, newQuantity){
+    if(newQuantity <= 0){
+      removeFromCart(productId);
+    }else{
+      const newCart = cart.map(item => {
+        if(item.id === productId){
+          return {...item, quantity: newQuantity};
+        }
+        return item;
+      });
+      setCart(newCart);
+    }
+  }
 
+  //clear the cart
+  function clearCart(){
+    setCart([]);
+  }
+
+  const cartTotal = cart.reduce((total, item) => total + item.price * item.quantity, 0);
+  const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
 
   return (
     <Router>
-      <Header cart={cart}/>
+      <Header  totalItems={totalItems}/>
       <Routes>
         <Route path="/" element={<Home addToCart={addToCart}/>} />
         <Route path="/products" element={<Products addToCart={addToCart}/>} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/cart" element={<CartPage />} />
+        <Route path="/cart" element={
+      <CartPage 
+        cart={cart}
+        updateQuantity={updateQuantity}
+        removeFromCart={removeFromCart}
+        clearCart={clearCart}
+        cartTotal={cartTotal}
+        totalItems={totalItems}
+      />
+} />
       </Routes>
       <Footer />
     </Router>

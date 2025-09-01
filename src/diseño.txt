@@ -83,11 +83,12 @@ Dark/Light mode con toggle (bonus).
 
 
 COSAS QUE ESTÁN PENDIENTE
-1. Buscador del Header Funcionalidades
-2. Botón de agregar al carrito funcional en todas las cards
+1. Buscador del Header Funcionando
+---------------------------------------2. Botón de agregar al carrito funcional en todas las cards
 3. Página de compras
 4. Cambiar las imágenes del banner
 5. ReadMe
 6. preguntar por todas las funcionalidades posibles de la cartpage y 
 7. quitarles a las tarjetas qeu aparezca la manito en toda la tarjeta 
- para que quede solo que aparezca cuando se haga hover sobre el
+ para que quede solo que aparezca cuando se haga hover sobre el boton de agregar
+8.cambiar las imagenes de los productos por las correspondientes para cada uno

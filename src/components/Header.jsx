@@ -5,11 +5,10 @@ import { NavLink } from "react-router-dom";
 import "./Header.css";
 import { Link } from "react-router-dom";
 
-export default function Header({cart}) {
+export default function Header({ totalItems}) {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const mobileMenuRef = useRef(null);
 
-    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
 
     const toggleMobileMenu = () => {
         setMobileMenuOpen(!mobileMenuOpen);
