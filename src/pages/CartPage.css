@@ -57,9 +57,6 @@
   text-align: center;
 }
 
-.cartpage-items-list {
-  /* Estilos para la lista de items */
-}
 
 .cartpage-footer {
   display: flex;
@@ -99,9 +96,7 @@
   font-size: 1.5rem;
 }
 
-.cartpage-summary-details {
-  /* Contenedor de detalles */
-}
+
 
 .cartpage-summary-row {
   display: flex;
@@ -151,6 +146,13 @@
 .cartpage-empty p {
   font-size: 1.2rem;
   color: var(--color-text-muted);
+}
+.cartpage-total-row {
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-top: 1px solid var(--color-border);
+  padding-top: 1rem;
+  margin-top: 1rem;
 }
 
 @media (max-width: 992px) {

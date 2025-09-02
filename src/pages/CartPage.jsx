@@ -46,6 +46,22 @@ export default function CartPage({ cart, updateQuantity, removeFromCart, clearCa
               <span>Items</span>
               <span>{totalItems}</span>
             </div>
+            <div className="cartpage-summary-row">
+              <span>Sub Total</span>
+              <span>${cartTotal.toFixed(2)}</span>
+            </div>
+            <div className="cartpage-summary-row">
+              <span>Shipping</span>
+              <span>$0.00</span>
+            </div>
+            <div className="cartpage-summary-row">
+              <span>Taxes</span>
+              <span>$0.00</span>
+            </div>
+            <div className="cartpage-summary-row cartpage-total-row">
+              <span>Total</span>
+              <span>${cartTotal.toFixed(2)}</span>
+            </div>
           </div>
           <button className="cartpage-checkout-btn">Proceed to Checkout</button>
         </div>
