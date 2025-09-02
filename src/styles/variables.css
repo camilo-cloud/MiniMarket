@@ -20,6 +20,11 @@
 :root {
   --font-main: 'Inter', sans-serif;
 
+  --width-price: 100px;
+  --width-quantity: 120px;
+  --width-total: 100px;
+  
+
   /* Brand Colors */
   --color-primary: #16A34A;   /* verde fresco: vegetales y productos naturales */
   --color-secondary: #FBBF24; /* amarillo cálido: frutas y sensación alegre */

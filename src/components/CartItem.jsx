@@ -17,18 +17,20 @@ export default function CartItem({product, updateQuantity, removeFromCart}){
                 <p className="cart__item-price">${product.price}</p>
                 <div className="quantity">
                     <button
+                        className="decrease__button"
                         aria-label="Decrease quantity"
                         onClick={() => updateQuantity(product.id, product.quantity - 1)}>    
                             -
                     </button>
-                    <input type="text" value={product.quantity} />
+                    <input className="quantity__input" type="text" value={product.quantity} />
                     <button 
-                    aria-label="Increase quantity"
-                    onClick={() => updateQuantity(product.id, product.quantity + 1)}>
-                        +
+                        className="increase__button"
+                        aria-label="Increase quantity"
+                        onClick={() => updateQuantity(product.id, product.quantity + 1)}>
+                            +
                     </button>
                 </div>
-                <p>${(product.price * product.quantity).toFixed(2)}</p>
+                <p className="cart__item-total">${(product.price * product.quantity).toFixed(2)}</p>
             </div>
         </section>
 

@@ -1,0 +1,129 @@
+
+
+.cart__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--color-border);
+  gap: 1rem;
+}
+
+.cart__item > button {
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  width: 40px;
+  height: 40px;
+}
+
+.cart__item > button:hover {
+  color: var(--color-accent);
+}
+
+.product__picture {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-grow: 1;
+}
+
+.product__picture img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+}
+
+.cart__item-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.cart__item-details {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cart__item-price,
+.cart__item-total {
+  width: var(--width-price);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--width-quantity);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+}
+
+.decrease__button,
+.increase__button {
+  background: none;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--color-text-muted);
+}
+
+.decrease__button:hover,
+.increase__button:hover {
+  color: var(--color-primary);
+}
+
+.quantity__input {
+  width: 30px;
+  border: none;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.quantity__input::-webkit-outer-spin-button,
+.quantity__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .cart__item {
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+  }
+
+  .cart__item > button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .cart__item-details {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+
+  :root {
+    --width-price: auto;
+    --width-quantity: auto;
+    --width-total: auto;
+  }
+}
