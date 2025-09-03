@@ -4,6 +4,7 @@ import Button from "./Button";
 import { NavLink } from "react-router-dom";
 import "./Header.css";
 import { Link } from "react-router-dom";
+import Search from "./Search";
 
 export default function Header({ totalItems}) {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -27,6 +28,8 @@ export default function Header({ totalItems}) {
         };
     }, []);
 
+    const closeMobileMenu = () => setMobileMenuOpen(false);
+
 
     return (
         <header className="header__container">
@@ -38,12 +41,7 @@ export default function Header({ totalItems}) {
             </NavLink>
 
             <div className="header__search-bar">
-                <input
-                    className="header__search-input"
-                    type="text"
-                    placeholder="Search products..."
-                />
-                <Button variant="secondary">Search</Button>
+              <Search />
             </div>
 
             <nav className="header__nav">
@@ -105,12 +103,7 @@ export default function Header({ totalItems}) {
             {mobileMenuOpen && (
                 <div className="header__mobile-menu" ref={mobileMenuRef}>
                     <div className="mobile-search">
-                        <input
-                            className="header__search-input"
-                            type="text"
-                            placeholder="Search products..."
-                        />
-                        <Button variant="secondary">Search</Button>
+                        <Search onSearch={closeMobileMenu} />
                     </div>
                     <ul className="mobile-nav-list">
                         <li>

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import CartItem from "../components/CartItem";
 import "./CartPage.css"
 
@@ -6,7 +7,7 @@ export default function CartPage({ cart, updateQuantity, removeFromCart, clearCa
         return (
           <div className="cartpage-empty">
             <h2>🛒 Your cart is empty</h2>
-            <p>Start shopping to add items!</p>
+            <p>Start <Link to="/products" className="shopping-link">shopping</Link>  to add items!</p>
           </div>
         );
       }

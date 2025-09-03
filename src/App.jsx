@@ -6,11 +6,28 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 import CartPage from "./pages/CartPage";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function App() {
 
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState(() => {
+    const savedCart = localStorage.getItem('minimarketCart');
+    if (savedCart) {
+      try {
+        return JSON.parse(savedCart);
+      } catch (error) {
+        console.error('Error loading cart from localStorage:', error);
+        localStorage.removeItem('minimarketCart'); // Clean corrupted data
+        return [];
+      }
+    }
+    return [];
+  });
+
+    // SAVE CART WHENEVER IT CHANGES
+    useEffect(() => {
+      localStorage.setItem('minimarketCart', JSON.stringify(cart));
+    }, [cart]);
 
   function addToCart(product) {
     const index = cart.findIndex(item => item.id === product.id);
@@ -20,7 +37,6 @@ function App() {
         ...newCart[index],
         quantity: newCart[index].quantity + 1
       };
-      console.log(newCart)
       setCart(newCart);
     } else {
       setCart([...cart, { ...product, quantity: 1 }]);
@@ -59,23 +75,25 @@ function App() {
   return (
     <Router>
       <Header  totalItems={totalItems}/>
-      <Routes>
-        <Route path="/" element={<Home addToCart={addToCart}/>} />
-        <Route path="/products" element={<Products addToCart={addToCart}/>} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/cart" element={
-      <CartPage 
-        cart={cart}
-        updateQuantity={updateQuantity}
-        removeFromCart={removeFromCart}
-        clearCart={clearCart}
-        cartTotal={cartTotal}
-        totalItems={totalItems}
-      />
-} />
-      </Routes>
-      <Footer />
+      <main>
+        <Routes>
+          <Route path="/" element={<Home addToCart={addToCart}/>} />
+          <Route path="/products" element={<Products addToCart={addToCart}/>} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/cart" element={
+            <CartPage 
+              cart={cart}
+              updateQuantity={updateQuantity}
+              removeFromCart={removeFromCart}
+              clearCart={clearCart}
+              cartTotal={cartTotal}
+              totalItems={totalItems}
+            />
+          } />
+        </Routes>
+        <Footer />
+      </main>
     </Router>
   );
 }
