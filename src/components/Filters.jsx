@@ -1,18 +1,23 @@
+// Import necessary hooks and CSS for the component.
 import { useMemo, useState } from "react";
 import "./Filters.css";
 
+// Define the Filters component, which allows users to filter products.
 export default function Filters({ selectedFilters, onFilterChange, productData, minPrice, maxPrice }) {
-  const [openSections, setOpenSections] = useState(["category"]); // keep category open by default
+  // State to manage which filter sections are open.
+  const [openSections, setOpenSections] = useState(["category"]); // Keep category open by default.
 
-  // memoize unique lists
+  // Memoize unique lists of categories and names to avoid re-calculating on every render.
   const uniqueCategories = useMemo(() => [...new Set(productData.map(p => p.category))], [productData]);
   const uniqueNames = useMemo(() => [...new Set(productData.map(p => p.name))], [productData]);
 
-  // names filtered by selected categories (same logic you had)
+  // Filter names based on the selected categories.
   const filteredNames = useMemo(() => {
+    // If no category is selected, return all unique names.
     if (!selectedFilters.category || selectedFilters.category.length === 0) {
       return uniqueNames;
     }
+    // Otherwise, return names that belong to the selected categories.
     return [...new Set(
       productData
         .filter(product => selectedFilters.category.includes(product.category))
@@ -20,13 +25,14 @@ export default function Filters({ selectedFilters, onFilterChange, productData, 
     )];
   }, [selectedFilters.category, productData, uniqueNames]);
 
+  // Toggle the open/closed state of a filter section.
   const toggleSection = (section) => {
     setOpenSections(prev =>
       prev.includes(section) ? prev.filter(s => s !== section) : [...prev, section]
     );
   };
 
-  // allow toggling with Enter/Space for accessibility
+  // Allow toggling with Enter/Space for accessibility.
   const handleTitleKey = (section, e) => {
     if (e.key === "Enter" || e.key === " ") {
       e.preventDefault();
@@ -34,16 +40,18 @@ export default function Filters({ selectedFilters, onFilterChange, productData, 
     }
   };
 
+  // Handle changes to the checkbox filters.
   const handleCheckboxChange = (filterType, value) => {
     const newFilters = {
       ...selectedFilters,
       [filterType]: selectedFilters[filterType].includes(value)
-        ? selectedFilters[filterType].filter(item => item !== value)
-        : [...selectedFilters[filterType], value]
+        ? selectedFilters[filterType].filter(item => item !== value) // Remove filter.
+        : [...selectedFilters[filterType], value] // Add filter.
     };
     onFilterChange(newFilters);
   };
 
+  // Handle changes to the price filters.
   const handlePriceChange = (type, value) => {
     onFilterChange({
       ...selectedFilters,
@@ -53,7 +61,7 @@ export default function Filters({ selectedFilters, onFilterChange, productData, 
 
   return (
     <div className="filters__container">
-      {/* Category */}
+      {/* Category Filter Section */}
       <div className="filter__section">
         <h3
           className="filter__title"
@@ -65,7 +73,6 @@ export default function Filters({ selectedFilters, onFilterChange, productData, 
         >
           <span>Category</span>
           <span className={`chevron ${openSections.includes("category") ? "open" : ""}`} aria-hidden="true">
-            {/* simple chevron-down SVG */}
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <polyline points="6 9 12 15 18 9"></polyline>
             </svg>
@@ -88,7 +95,7 @@ export default function Filters({ selectedFilters, onFilterChange, productData, 
         )}
       </div>
 
-      {/* Name */}
+      {/* Name Filter Section */}
       <div className="filter__section">
         <h3
           className="filter__title"
@@ -126,7 +133,7 @@ export default function Filters({ selectedFilters, onFilterChange, productData, 
         )}
       </div>
 
-      {/* Price */}
+      {/* Price Filter Section */}
       <div className="filter__section">
         <h3
           className="filter__title"

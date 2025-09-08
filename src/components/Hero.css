@@ -6,7 +6,7 @@
 .hero-slide {
   position: relative;
   width: 100%;
-  height: 70vh; /* Adjust height depending on design */
+  height: 80vh; /* Adjust height depending on design */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,7 +16,7 @@
 .hero-slide img {
   width: 100%;
   height: 100%;
-  object-fit:fill;
+  object-fit:cover;
 }
 
 .hero-text h2 {
@@ -65,6 +65,10 @@
 @media (max-width: 768px) {
   .hero-slide {
     height: 40vh;
+  }
+  .hero-slide img{
+    object-fit:fill;
+    
   }
   
   .hero-text h2 {
