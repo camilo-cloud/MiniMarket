@@ -5,16 +5,17 @@
 
 This project is a front-end simulation of an online minimarket, built with React. It's a portfolio project designed to demonstrate key skills in modern, component-based web development.
 
-**[Live Demo Link]()** &nbsp;&nbsp; *(<- You can add the link here once it's deployed!)*
+**[Live Demo Link]()** &nbsp;&nbsp; *(<- Add the link here once it's deployed)*
 
 ---
 
 ## 📸 Screenshots
 
-![MiniMarket Desktop View](./public/desktop-preview.png)
+**Desktop View**
+![MiniMarket Desktop View](./assets/images/cover.png)
 
-
-![MiniMarket Mobile View](./public/mobile-preview.png)
+**Mobile View**
+![MiniMarket Mobile View](./assets/images/cover-mobil.png)
 
 ---
 
