@@ -12,10 +12,11 @@ This project is a front-end simulation of an online minimarket, built with React
 ## 📸 Screenshots
 
 **Desktop View**
-![MiniMarket Desktop View](./assets/images/cover.png)
+![MiniMarket Desktop View](./src/assets/images/cover.PNG)
 
 **Mobile View**
-![MiniMarket Mobile View](./assets/images/cover-mobil.png)
+
+![MiniMarket Mobile View](./src/assets/images/cover-mobil.PNG)
 
 ---
 
