@@ -31,11 +31,18 @@
 .contact__info, .contact__form-container {
   flex: 1;
 }
-
+.contact__info{
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+}
+.contact__info p{
+  margin-bottom: 10px;
+}
 .contact__info-title {
   font-size: 1.5rem;
   color: var(--color-primary);
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .info__list {
@@ -46,7 +53,7 @@
 
 .info__item {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   margin-bottom: 20px;
   color: var(--color-text-muted);
 }
@@ -124,7 +131,9 @@
     flex-direction: column;
     gap: 40px;
   }
-
+  .contact__info{
+    align-items: center;
+  }
   .contact__form .btn {
     align-self: stretch;
   }
@@ -133,5 +142,8 @@
 @media (max-width: 480px) {
   .contact__title {
     font-size: 2.2rem;
+  }
+  .contact__info{
+    align-items: center;
   }
 }

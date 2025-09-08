@@ -63,7 +63,7 @@ export default function Contact() {
       <div className="contact__content">
         <div className="contact__info">
             <h2 className="contact__info-title">Contact Information</h2>
-            <p>We're here to help. Reach out to us through any of the channels below.</p>
+            <p>Reach out to us through any of the channels below.</p>
             
             <ul className="info__list">
                 <li className="info__item">
@@ -84,11 +84,7 @@ export default function Contact() {
             <ul className="info__list">
                  <li className="info__item">
                     <span className="info__icon">🕒</span>
-                    <p>Monday - Saturday: 8:00 AM - 9:00 PM</p>
-                </li>
-                 <li className="info__item">
-                    <span className="info__icon"></span>
-                    <p>Sundays: 10:00 AM - 7:00 PM</p>
+                    <p>Monday - Saturday: 8:00 AM - 9:00 PM<br/>Sundays: 10:00 AM - 7:00 PM</p>
                 </li>
             </ul>
         </div>

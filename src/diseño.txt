@@ -86,11 +86,10 @@ COSAS QUE ESTÁN PENDIENTE
 --- HECHO --- 1. Buscador del Header Funcionando
 --- HECHO --- 2. Botón de agregar al carrito funcional en todas las cards
 --- HECHO --- 3. Página de compras
-4. Cambiar las imágenes del banner
+--- HECHO --- 4. Cambiar las imágenes del banner
 --- HECHO --- 5. ReadMe
 --- HECHO --- 6. preguntar por todas las funcionalidades posibles de la cartpage y 
 --- HECHO --- 7. quitarles a las tarjetas qeu aparezca la manito en toda la tarjeta para que quede solo que aparezca cuando se haga hover sobre el boton de agregar
-8.cambiar las imagenes de los productos por las correspondientes para cada uno
---- HECHO --- 9. About y Contact pages
-10. Repasar el codigo y ajustar comentarios
---- HECHO --- 11. corregir texto del footer que está en español
+--- HECHO --- 8. About y Contact pages
+--- HECHO --- 9. Repasar el codigo y ajustar comentarios
+--- HECHO --- 10. corregir texto del footer que está en español
