@@ -16,33 +16,31 @@ export default function Footer() {
               <h2 className="footer__logo-text">MiniMarket</h2>
             </div>
           </NavLink>
-          <p className="footer__copy">© 2025 MiniMarket. Creado por Camilo Cuartas</p>
+          <p className="footer__copy">© 2025 MiniMarket. Created by Camilo Cuartas</p>
         </div>
-
-
 
         {/* Links */}
         <div className="footer__links">
-          <h3>Enlaces</h3>
+          <h3>Links</h3>
           <ul>
-            <li><NavLink to="/">Inicio</NavLink></li>
-            <li><NavLink to="/products">Productos</NavLink></li>
-            <li><NavLink to="/about">Nosotros</NavLink></li>
-            <li><NavLink to="/contact">Contacto</NavLink></li>
+            <li><NavLink to="/">Home</NavLink></li>
+            <li><NavLink to="/products">Products</NavLink></li>
+            <li><NavLink to="/about">About Us</NavLink></li>
+            <li><NavLink to="/contact">Contact</NavLink></li>
           </ul>
         </div>
 
-        {/* Contacto */}
+        {/* Contact */}
         <div className="footer__contact">
-          <h3>Contacto</h3>
-          <p>📍 Calle Falsa 123, Ciudad</p>
-          <p>📞 +57 300 000 0000</p>
-          <p>✉️ contacto@minimarket.com</p>
+          <h3>Contact Us</h3>
+          <p>📍 123 Fake St, Nabesville</p>
+          <p>📞 (123) 456-7890</p>
+          <p>✉️ hello@minimarket.com</p>
         </div>
 
-        {/* Redes sociales */}
+        {/* Social media */}
         <div className="footer__icons">
-          <h3>Síguenos</h3>
+          <h3>Follow Us</h3>
           <a href="#">Facebook</a>
           <a href="#">Instagram</a>
           <a href="#">WhatsApp</a>
