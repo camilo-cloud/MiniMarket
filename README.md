@@ -5,7 +5,7 @@
 
 This project is a front-end simulation of an online minimarket, built with React. It's a portfolio project designed to demonstrate key skills in modern, component-based web development.
 
-**[Live Demo Link]()** &nbsp;&nbsp; *(<- Add the link here once it's deployed)*
+**[Live Demo](https://mini-market-eosin.vercel.app/)** 🚀
 
 ---
 
