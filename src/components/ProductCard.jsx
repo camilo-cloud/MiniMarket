@@ -14,7 +14,7 @@ export default function ProductCard({ id, name, price, image, isOffer, addToCart
   return (
     <div className="card__container">
       <div className="product__img-container">
-        <img className="product__img" src={image} alt={name} />
+        <img className="product__img" src={image} alt={name} loading="lazy" />
       </div>
 
       <div className="product__text">

@@ -1,0 +1,51 @@
+/* src/pages/NotFoundPage.css */
+
+.not-found-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 60vh; /* Adjust as needed */
+  padding: 20px;
+  font-family: var(--font-main);
+}
+
+.not-found-content {
+  max-width: 500px;
+}
+
+.not-found-title {
+  font-size: 6rem;
+  font-weight: 900;
+  color: var(--color-primary);
+  margin: 0;
+  line-height: 1;
+}
+
+.not-found-subtitle {
+  font-size: 1.75rem;
+  color: var(--color-text);
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.not-found-text {
+  color: var(--color-text-muted);
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.not-found-link {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--color-primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.not-found-link:hover {
+  background-color: var(--color-accent); /* A nice hover effect */
+}

@@ -6,6 +6,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 import CartPage from "./pages/CartPage";
+import NotFoundPage from "./pages/NotFoundPage"; // Import the new page
 import { useState, useEffect } from "react";
 
 function App() {
@@ -91,6 +92,7 @@ function App() {
               totalItems={totalItems}
             />
           } />
+          <Route path="*" element={<NotFoundPage />} /> {/* This is the 404 route */}
         </Routes>
         <Footer />
       </main>
